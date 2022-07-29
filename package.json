@@ -1,0 +1,23 @@
+{
+  "name": "owen-twenty-three",
+  "version": "1.0.0",
+  "author": "",
+  "browserslist": [
+    "defaults"
+  ],
+  "dependencies": {
+    "autoprefixer": "^10.4.7",
+    "postcss-cli": "^9.0.2"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "sass": "^1.51.0"
+  },
+  "license": "ISC",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run sass && eleventy",
+    "sass": "sass --style=compressed src/scss/style.scss:public/css/style.css && postcss public/css/style.css --replace --use autoprefixer",
+    "watch": "eleventy --serve & sass --watch src/scss/style.scss:public/css/style.css"
+  }
+}

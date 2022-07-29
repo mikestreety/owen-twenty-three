@@ -1,0 +1,14 @@
+backend:
+  name: git-gateway
+  branch: main
+media_folder: "public/assets/images"
+public_folder: "/assets/images"
+collections:
+  - name: "portfolio"
+    label: "Portfolio"
+    folder: "src/portfolio"
+    create: true
+    fields:
+      - { label: "title", name: "title", widget: "string" }
+      - { label: "video", name: "video", widget: "string" }
+      - { label: "image", name: "image", widget: "image" }
